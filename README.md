@@ -23,13 +23,13 @@ The application scrapes updated price data, stores it locally, and serves it thr
 
 ## ✨ Features
 
-- 📈 Displays gold prices in Nepal  
-- 📉 Displays silver prices in Nepal  
-- 🕸️ Web scraping integration  
-- ⚡ Fast cached responses  
-- 🔗 JSON API support  
-- 📱 Responsive UI  
-- 🚀 Deployable on Render  
+- 📈 Displays gold prices in Nepal
+- 📉 Displays silver prices in Nepal
+- 🕸️ Web scraping integration
+- ⚡ Fast cached responses
+- 🔗 JSON API support
+- 📱 Responsive UI
+- 🚀 Deployable on Render
 
 ---
 
@@ -38,11 +38,13 @@ The application scrapes updated price data, stores it locally, and serves it thr
 > Add your actual screenshots in `/static/screenshots/`
 
 ### 🏠 Homepage
+
 <p align="center">
   <img src="https://via.placeholder.com/900x450.png?text=Homepage+Screenshot" />
 </p>
 
 ### 📊 Price Display
+
 <p align="center">
   <img src="https://via.placeholder.com/900x450.png?text=Gold+Silver+Price+UI" />
 </p>
@@ -52,17 +54,20 @@ The application scrapes updated price data, stores it locally, and serves it thr
 ## 🛠️ Tech Stack
 
 ### Backend
-- Python  
-- Flask  
+
+- Python
+- Flask
 
 ### Frontend
-- HTML  
-- CSS  
-- JavaScript  
-- Jinja2 Templates  
+
+- HTML
+- CSS
+- JavaScript
+- Jinja2 Templates
 
 ### Deployment
-- Render  
+
+- Render
 
 ---
 
@@ -84,25 +89,27 @@ project/
 └── README.md
 
 ```
+
 ⚙️ Installation
+
 1. Clone Repository
-git clone https://github.com/your-username/your-repository-name.git
+   git clone https://github.com/your-username/your-repository-name.git
 2. Move into Project
-cd your-repository-name
+   cd your-repository-name
 3. Create Virtual Environment
-Windows
-python -m venv venv
-venv\Scripts\activate
-Linux / Mac
-python3 -m venv venv
-source venv/bin/activate
+   Windows
+   python -m venv venv
+   venv\Scripts\activate
+   Linux / Mac
+   python3 -m venv venv
+   source venv/bin/activate
 4. Install Dependencies
-pip install -r requirements.txt
+   pip install -r requirements.txt
 5. Run Project
-python main.py
-🌐 API Endpoints
-📊 Get Prices
-/rate
+   python main.py
+   🌐 API Endpoints
+   📊 Get Prices
+   /rate
 
 Returns JSON formatted gold & silver prices.
 
