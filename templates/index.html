@@ -14,16 +14,16 @@
   </head>
 
   <body
-    class="text-[Poppins] mx-[20vw] bg-orange-50 from-pink-200 to-green-100 h-[100vh]"
+    class="text-[Poppins] md:mx-[20vw] bg-orange-50 from-pink-200 to-green-100 h-[100vh]"
   >
     <div class="flex flex-col items-center justify-center">
       <div
         class="flex flex-col text-yellow-950 items-center justify-center gap-2 mt-[20vh] mb-[10vh]"
       >
-        <h1 class="text-5xl font-black uppercase">Gold and Silver</h1>
+        <h1 class="text-3xl md:text-5xl text-center font-black uppercase">Gold and Silver</h1>
         <p class="text-2xl">Price in Nepal</p>
       </div>
-      <div class="flex items-center justify-around w-[60vw] m-auto">
+      <div class="flex items-center justify-around md:w-[60vw] m-auto">
         <div class="items-center flex flex-col">
           <div id="rate" class="flex flex-col gap-20"></div>
         </div>
@@ -35,15 +35,15 @@
         console.log(resp.data);
         const rate = resp.data[0];
         document.querySelector("#rate").innerHTML = `
-        <div class="flex items-center justify-around relative w-100 h-20">
-          <img src="/images/gold.png" alt="gold bar">
-          <p class="text-3xl text-white font-semibold">${rate.goldrate}</p>
+        <div class="flex items-center justify-around relative md:w-100 h-20 px-5">
+          <img src="/static/images/gold.png" alt="gold bar" class="md:h-30 h-20"/>
+          <p class="md:text-3xl text-white font-semibold">${rate.goldrate}</p>
           <div class="p-5 absolute -z-1 top-0 left-0 bg-red-400 w-[100%] h-[100%]">
           </div>
         </div>
-        <div class="flex items-center justify-around relative w-100 h-20">
-          <img src="/images/silver.png" alt="silver bar">
-          <p class="text-3xl text-white font-semibold">${rate.silverrate}</p>
+        <div class="flex items-center justify-around relative md:w-100 h-20 px-5">
+          <img src="/static/images/silver.png" alt="silver bar" class="md:h-30 h-12"/>
+          <p class="md:text-3xl text-white font-semibold">${rate.silverrate}</p>
           <div class="p-5 absolute -z-1 top-0 left-0 bg-red-400 w-[100%] h-[100%]">
           </div>
         </div>

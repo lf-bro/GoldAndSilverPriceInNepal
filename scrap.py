@@ -13,11 +13,11 @@ def scrap():
         li = item.find_all("li")
         # gold = li[0].text.strip()
         goldrate = (
-            li[1].text.strip().replace(" ", "").replace("\n", "").replace(",", " ")
+            li[1].text.strip().replace(" ", "").replace("\n", "")
         )
         # silver = li[4].text.strip()
         silverate = (
-            li[5].text.strip().replace(" ", "").replace("\n", "").replace(",", " ")
+            li[5].text.strip().replace(" ", "").replace("\n", "")
         )
         # obj["goldname"] = f"{gold}"
         obj["goldrate"] = f"{goldrate}"
