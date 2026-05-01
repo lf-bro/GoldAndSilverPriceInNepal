@@ -1,7 +1,4 @@
-
-# <p align="center">
-Gold & Silver Price in Nepal Web App
-</p>
+# Gold & Silver Price in Nepal Web App
 
 <p align="center">
   <img src="https://goldandsilverpriceinnepal.onrender.com/static/screenshots/banner.png" alt="Banner">
