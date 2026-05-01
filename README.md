@@ -35,8 +35,6 @@ The application scrapes updated price data, stores it locally, and serves it thr
 
 ## 🖼️ Screenshots
 
-> Add your actual screenshots in `/static/screenshots/`
-
 ### 🏠 Homepage
 
 <p align="center">
@@ -57,6 +55,10 @@ The application scrapes updated price data, stores it locally, and serves it thr
 
 - Python
 - Flask
+- bs4
+- requests
+- apscheduler
+- gunicorn
 
 ### Frontend
 
@@ -64,6 +66,7 @@ The application scrapes updated price data, stores it locally, and serves it thr
 - CSS
 - JavaScript
 - Jinja2 Templates
+- TailwindCSS
 
 ### Deployment
 
@@ -104,10 +107,11 @@ cd your-repository-name
 
 ### 3. Create Virtual Environment
 
-Windows
+***Windows***
 python -m venv venv
 venv\Scripts\activate
-Linux / Mac
+
+***Linux / Mac***
 python3 -m venv venv
 source venv/bin/activate
 
@@ -122,7 +126,6 @@ python main.py
 
 📊 Get Prices
 /rate
-
 Returns JSON formatted gold & silver prices.
 
 ❤️ Health Check
@@ -144,11 +147,11 @@ gunicorn main:app
 
 Scraping runs separately from user requests
 Data stored in rate.json
-
 Instant API response using cached data
 Reduces server load and improves speed
 
-🔮 Future Improvements
+### 🔮 Future Improvements
+
 📊 Historical price tracking
 📈 Graph visualization
 🗄️ PostgreSQL integration
