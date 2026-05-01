@@ -89,25 +89,36 @@ project/
 └── README.md
 
 ```
+---
 
-⚙️ Installation
+## ⚙️ Installation
 
-1. Clone Repository
+### 1. Clone Repository
+   
    git clone https://github.com/your-username/your-repository-name.git
-2. Move into Project
+
+### 2. Move into Project
+
    cd your-repository-name
-3. Create Virtual Environment
+
+### 3. Create Virtual Environment
+
    Windows
    python -m venv venv
    venv\Scripts\activate
    Linux / Mac
    python3 -m venv venv
    source venv/bin/activate
-4. Install Dependencies
+
+### 4. Install Dependencies
+
    pip install -r requirements.txt
-5. Run Project
+
+### 5. Run Project
+
    python main.py
    🌐 API Endpoints
+
    📊 Get Prices
    /rate
 
@@ -118,7 +129,7 @@ Returns JSON formatted gold & silver prices.
 
 Used for deployment monitoring.
 
-🚀 Deployment
+## 🚀 Deployment
 
 You can deploy this project using:
 
@@ -127,11 +138,15 @@ Railway
 Fly.io
 ▶️ Production Start Command
 gunicorn main:app
-⚡ Optimization
+
+## ⚡ Optimization
+
 Scraping runs separately from user requests
 Data stored in rate.json
+
 Instant API response using cached data
 Reduces server load and improves speed
+
 🔮 Future Improvements
 📊 Historical price tracking
 📈 Graph visualization
@@ -141,7 +156,7 @@ Reduces server load and improves speed
 📱 Mobile UI improvements
 👨‍💻 Author
 
-Made by: L.F. PEMI MAGAR
+#### Made by: L.F. PEMI MAGAR
 
 🔗 GitHub: https://github.com/lf-bro
 
