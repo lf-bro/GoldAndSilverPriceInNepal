@@ -1,21 +1,34 @@
 from flask import Flask, render_template, jsonify
+from apscheduler.schedulers.background import BackgroundScheduler
 import scrap
 import json
-import os
 
-app = Flask(__name__, static_folder='static', static_url_path='/static')
+app = Flask(__name__)
+
+# Run scraper once on startup
+scrap.scrap()
+
+# Schedule scraper every 24 hours
+scheduler = BackgroundScheduler()
+scheduler.add_job(func=scrap.scrap, trigger="interval", hours=24)
+scheduler.start()
 
 
 @app.route("/")
 def home():
-    scrap.scrap()
     return render_template("index.html")
+
+
+@app.route("/health")
+def health():
+    return "ok", 200
 
 
 @app.route("/rate")
 def rate():
     with open("rate.json", "r") as f:
-        return jsonify(json.loads(f.read()))
+        return jsonify(json.load(f))
 
 
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
