@@ -1,7 +1,7 @@
-# 🇳🇵 Nepal Gold & Silver Price Web App
+# Gold & Silver Price in Nepal Web App
 
 <p align="center">
-  <img src="https://via.placeholder.com/1000x300.png?text=Nepal+Gold+%26+Silver+Price+Web+App" alt="Banner">
+  <img src="https://goldandsilverpriceinnepal.onrender.com/static/screenshots/banner.png" alt="Banner">
 </p>
 
 <p align="center">
@@ -40,13 +40,13 @@ The application scrapes updated price data, stores it locally, and serves it thr
 ### 🏠 Homepage
 
 <p align="center">
-  <img src="https://via.placeholder.com/900x450.png?text=Homepage+Screenshot" />
+  <img src="https://goldandsilverpriceinnepal.onrender.com/static/screenshots/home.png" />
 </p>
 
 ### 📊 Price Display
 
 <p align="center">
-  <img src="https://via.placeholder.com/900x450.png?text=Gold+Silver+Price+UI" />
+  <img src="https://goldandsilverpriceinnepal.onrender.com/static/screenshots/display.png" />
 </p>
 
 ---
@@ -89,38 +89,39 @@ project/
 └── README.md
 
 ```
+
 ---
 
 ## ⚙️ Installation
 
 ### 1. Clone Repository
-   
-   git clone https://github.com/your-username/your-repository-name.git
+
+git clone https://github.com/lf-bro/GoldAndSilverPriceInNepal.git
 
 ### 2. Move into Project
 
-   cd your-repository-name
+cd your-repository-name
 
 ### 3. Create Virtual Environment
 
-   Windows
-   python -m venv venv
-   venv\Scripts\activate
-   Linux / Mac
-   python3 -m venv venv
-   source venv/bin/activate
+Windows
+python -m venv venv
+venv\Scripts\activate
+Linux / Mac
+python3 -m venv venv
+source venv/bin/activate
 
 ### 4. Install Dependencies
 
-   pip install -r requirements.txt
+pip install -r requirements.txt
 
 ### 5. Run Project
 
-   python main.py
-   🌐 API Endpoints
+python main.py
+🌐 API Endpoints
 
-   📊 Get Prices
-   /rate
+📊 Get Prices
+/rate
 
 Returns JSON formatted gold & silver prices.
 
