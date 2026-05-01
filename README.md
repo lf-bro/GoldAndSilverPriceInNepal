@@ -1,45 +1,72 @@
 # 🇳🇵 Nepal Gold & Silver Price Web App
 
-A simple Flask-based web application that displays the latest gold and silver prices in Nepal using web scraping.
+<p align="center">
+  <img src="https://via.placeholder.com/1000x300.png?text=Nepal+Gold+%26+Silver+Price+Web+App" alt="Banner">
+</p>
 
-The application scrapes updated price data, stores it locally, and serves it through a clean web interface and JSON API.
-
----
-
-# ✨ Features
-
-- Displays gold prices in Nepal
-- Displays silver prices in Nepal
-- Web scraping integration
-- JSON API endpoint
-- Fast cached data delivery
-- Flask backend
-- Responsive frontend
-- Deployable on Render
+<p align="center">
+  <img src="https://img.shields.io/badge/Flask-Python-blue?style=for-the-badge&logo=flask" />
+  <img src="https://img.shields.io/badge/Backend-API-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Frontend-HTML%2FCSS%2FJS-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Deployment-Render-purple?style=for-the-badge" />
+</p>
 
 ---
 
-# 🛠️ Tech Stack
+## 📌 Overview
 
-## Backend
+A simple **Flask-based web application** that displays the latest **gold and silver prices in Nepal** using web scraping.
 
-- Python
-- Flask
-
-## Frontend
-
-- HTML
-- CSS
-- JavaScript
-- Jinja2 Templates
-
-## Deployment
-
-- Render
+The application scrapes updated price data, stores it locally, and serves it through a **clean UI and JSON API**.
 
 ---
 
-# 📁 Project Structure
+## ✨ Features
+
+- 📈 Displays gold prices in Nepal  
+- 📉 Displays silver prices in Nepal  
+- 🕸️ Web scraping integration  
+- ⚡ Fast cached responses  
+- 🔗 JSON API support  
+- 📱 Responsive UI  
+- 🚀 Deployable on Render  
+
+---
+
+## 🖼️ Screenshots
+
+> Add your actual screenshots in `/static/screenshots/`
+
+### 🏠 Homepage
+<p align="center">
+  <img src="https://via.placeholder.com/900x450.png?text=Homepage+Screenshot" />
+</p>
+
+### 📊 Price Display
+<p align="center">
+  <img src="https://via.placeholder.com/900x450.png?text=Gold+Silver+Price+UI" />
+</p>
+
+---
+
+## 🛠️ Tech Stack
+
+### Backend
+- Python  
+- Flask  
+
+### Frontend
+- HTML  
+- CSS  
+- JavaScript  
+- Jinja2 Templates  
+
+### Deployment
+- Render  
+
+---
+
+## 📁 Project Structure
 
 ```bash
 project/
@@ -56,54 +83,55 @@ project/
 │
 └── README.md
 
+```
 ⚙️ Installation
-1. Clone the repository
+1. Clone Repository
 git clone https://github.com/your-username/your-repository-name.git
-2. Move into the project directory
+2. Move into Project
 cd your-repository-name
-3. Create virtual environment
+3. Create Virtual Environment
 Windows
 python -m venv venv
 venv\Scripts\activate
 Linux / Mac
 python3 -m venv venv
 source venv/bin/activate
-4. Install dependencies
+4. Install Dependencies
 pip install -r requirements.txt
-5. Run the project
+5. Run Project
 python main.py
 🌐 API Endpoints
-📊 Get Gold & Silver Prices
+📊 Get Prices
 /rate
 
-Returns JSON formatted price data.
+Returns JSON formatted gold & silver prices.
 
 ❤️ Health Check
 /health
 
-Used for deployment monitoring on Render.
+Used for deployment monitoring.
 
 🚀 Deployment
 
-This project can be deployed using:
+You can deploy this project using:
 
 Render
 Railway
 Fly.io
-▶️ Recommended Start Command
+▶️ Production Start Command
 gunicorn main:app
 ⚡ Optimization
-Scraping process is separated from user requests
-Data is stored locally in rate.json
-Users receive cached data instantly
-Improves performance and reduces unnecessary scraping
+Scraping runs separately from user requests
+Data stored in rate.json
+Instant API response using cached data
+Reduces server load and improves speed
 🔮 Future Improvements
-Historical price records
-Charts and visualization
-PostgreSQL integration
-Admin dashboard
-Search functionality
-Mobile UI improvements
+📊 Historical price tracking
+📈 Graph visualization
+🗄️ PostgreSQL integration
+🧑‍💻 Admin dashboard
+🔍 Search functionality
+📱 Mobile UI improvements
 👨‍💻 Author
 
 Made by: L.F. PEMI MAGAR
@@ -111,4 +139,5 @@ Made by: L.F. PEMI MAGAR
 🔗 GitHub: https://github.com/lf-bro
 
 🔗 LinkedIn: https://www.linkedin.com/in/lfpemimagar/
-```
+
+<p align="center"> ⭐ If you like this project, don't forget to star the repository! </p> ```
