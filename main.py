@@ -1,16 +1,16 @@
 from flask import Flask, render_template, jsonify
 from apscheduler.schedulers.background import BackgroundScheduler
-import scrap
+import scrape
 import json
 
 app = Flask(__name__)
 
 # Run scraper once on startup
-scrap.scrap()
+scrape.scrape()
 
 # Schedule scraper every 24 hours
 scheduler = BackgroundScheduler()
-scheduler.add_job(func=scrap.scrap, trigger="interval", hours=24)
+scheduler.add_job(func=scrape.scrape, trigger="interval", hours=24)
 scheduler.start()
 
 

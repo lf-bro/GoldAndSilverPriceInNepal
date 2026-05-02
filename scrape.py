@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup as bs
 
 
-def scrap():
+def scrape():
     resp = requests.get("https://www.hamropatro.com/gold")
     soup = bs(resp.content, "html.parser")
     list = []
@@ -12,13 +12,9 @@ def scrap():
     for item in items:
         li = item.find_all("li")
         # gold = li[0].text.strip()
-        goldrate = (
-            li[1].text.strip().replace(" ", "").replace("\n", "")
-        )
+        goldrate = li[1].text.strip().replace(" ", "").replace("\n", "")
         # silver = li[4].text.strip()
-        silverate = (
-            li[5].text.strip().replace(" ", "").replace("\n", "")
-        )
+        silverate = li[5].text.strip().replace(" ", "").replace("\n", "")
         # obj["goldname"] = f"{gold}"
         obj["goldrate"] = f"{goldrate}"
         # obj["silvername"] = f"{silver}"
@@ -28,4 +24,4 @@ def scrap():
         json.dump(list, f, indent=4)
 
 
-scrap()
+scrape()
