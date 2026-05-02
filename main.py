@@ -2,16 +2,46 @@ from flask import Flask, render_template, jsonify
 from apscheduler.schedulers.background import BackgroundScheduler
 import scrape
 import json
+import logging
+import atexit
 
 app = Flask(__name__)
 
-# Run scraper once on startup
-scrape.scrape()
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-# Schedule scraper every 24 hours
-scheduler = BackgroundScheduler()
-scheduler.add_job(func=scrape.scrape, trigger="interval", hours=24)
+# Run scraper once on startup with error handling
+try:
+    scrape.scrape()
+    logger.info("Initial scrape completed successfully")
+except Exception as e:
+    logger.error(f"Initial scrape failed: {e}", exc_info=True)
+
+# Schedule scraper to run daily at 11 AM (Nepal Time)
+scheduler = BackgroundScheduler(timezone="Asia/Kathmandu")
+scheduler.add_job(
+    func=scrape.scrape,
+    trigger="cron",
+    hour=11,
+    minute=0,
+    id="gold_silver_scraper",
+    name="Gold and Silver Price Scraper",
+    replace_existing=True,
+    max_instances=1,
+)
 scheduler.start()
+logger.info("Scheduler started")
+
+
+# Graceful shutdown
+def shutdown_scheduler():
+    if scheduler.running:
+        scheduler.shutdown()
+        logger.info("Scheduler shut down gracefully")
+
+
+atexit.register(shutdown_scheduler)
 
 
 @app.route("/")
@@ -31,4 +61,4 @@ def rate():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
